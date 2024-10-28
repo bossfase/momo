@@ -12,7 +12,7 @@ body {
 /* Header */
 header {
     background-color: #fff;
-    padding: 10px; /* Weniger Polsterung oben und unten */
+    padding: 0px; /* Weniger Polsterung oben und unten */
     text-align: center;
     height: auto; /* Automatische Höhe, um den Inhalt zu passen */
 }
