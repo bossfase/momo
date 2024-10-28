@@ -1,75 +1,63 @@
 /* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
-    background: #000; /* Hintergrund auf schwarz ändern */
+    background: #000; /* Schwarzer Hintergrund */
     color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
-/* Overlay für bessere Lesbarkeit */
-.overlay {
-    background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
 /* Header */
 header {
-    background-color: #fff; /* Weißer Hintergrund */
+    background-color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative;
 }
 
 /* Hauptlogo */
 .main-logo {
-    width: 30%; /* Breite auf 70% des Bildschirms anpassen */
+    width: 30%;
     height: auto;
-    margin: 0 auto; /* Zentrieren */
-    display: block; /* Damit das Bild als Block angezeigt wird */
-    padding: 20px 0; /* Abstand um das Bild */
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
 }
 
 /* Navigation */
 nav {
     background-color: #333;
-    padding: 10px; /* Padding für die Navigation */
+    padding: 10px;
 }
 
 nav ul {
-    list-style: none; /* Keine Aufzählungszeichen */
+    list-style: none;
     padding: 0;
-    text-align: center; /* Zentrierte Navigation */
-    display: inline-flex; /* Flexbox für die Navigation */
+    text-align: center;
+    display: inline-flex;
 }
 
 nav ul li {
-    margin-right: 10px; /* Abstand zwischen den Links */
+    margin-right: 10px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Keine Unterstreichung */
+    text-decoration: none;
     color: #b87c62; /* Warme metallische Farbe */
-    padding: 5px 10px; /* Polsterung für Links */
-    border-radius: 20px; /* Runde Ecken für Links */
-    font-size: 14px; /* Schriftgröße für die Navigation */
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 nav ul li a:hover {
-    color: #fff; /* Weiße Schriftfarbe beim Hover */
-    background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
+    color: #fff;
+    background-color: rgba(184, 124, 98, 0.8);
 }
 
 /* Hauptinhalt */
 main {
     padding: 20px;
-    max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
-    margin: auto; /* Zentriert den Hauptinhalt */
+    max-width: 1200px;
+    margin: auto;
 }
 
 section {
@@ -78,79 +66,77 @@ section {
     margin: 10px auto;
     border-radius: 10px;
     max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Titel */
 h2 {
-    border-bottom: 2px solid #b87c62; /* Akzentfarbe für Titel */
-    margin-bottom: 15px; /* Abstand unter der Überschrift */
+    border-bottom: 2px solid #b87c62;
+    margin-bottom: 15px;
 }
 
 /* Galerie */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Gleichmäßige Verteilung */
+    justify-content: space-between;
 }
 
 .gallery img {
-    width: 30%; /* Breite der Bilder in der Galerie */
-    height: auto; /* Automatische Höhe */
-    margin: 5px 0; /* Abstand zwischen den Bildern */
-    border-radius: 10px; /* Runde Ecken für die Bilder */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Bilder */
+    width: 30%;
+    height: auto;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    background-color: #444; /* Dunkles Grau für den Footer */
-    color: #f0f0f0; /* Helle Schriftfarbe */
-    text-align: center; /* Zentrierter Text */
-    padding: 15px; /* Polsterung */
+    background-color: #444;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px;
 }
 
 /* Formularstile für Kontakt */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px; /* Maximale Breite des Formulars */
-    margin: auto; /* Zentrieren */
+    max-width: 500px;
+    margin: auto;
 }
 
 label {
-    margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+    margin-bottom: 5px;
 }
 
 input, textarea {
-    margin-bottom: 15px; /* Abstand zwischen den Eingabefeldern */
-    padding: 10px; /* Polsterung für die Eingabefelder */
-    border: 1px solid #ccc; /* Rahmenfarbe */
-    border-radius: 5px; /* Runde Ecken */
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #b87c62; /* Hintergrundfarbe des Buttons */
-    color: white; /* Schriftfarbe des Buttons */
-    border: none; /* Kein Rahmen */
-    padding: 10px; /* Polsterung */
-    border-radius: 5px; /* Runde Ecken */
-    cursor: pointer; /* Zeigt, dass es klickbar ist */
+    background-color: #b87c62;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #a56e5a; /* Dunklere Farbe beim Hover */
+    background-color: #a56e5a;
 }
 
 /* Kontaktstile */
 .contact-info {
-    text-align: left; /* Zentriert die Kontaktinformationen */
-    font-size: 16px; /* Schriftgröße anpassen */
+    text-align: left; /* Linksbündig statt zentriert */
+    font-size: 16px;
 }
 
-/* E-Mail und Telefonnummer in orange */
 .contact-info .email,
 .contact-info .telephone {
-    color: #b87c62; /* Kontaktinformationen in der orange Farbe */
+    color: #b87c62;
 }
-
