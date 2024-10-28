@@ -2,6 +2,7 @@
 body {
     font-family: 'Helvetica', sans-serif;
     background: #000; /* Schwarzer Hintergrund */
+    background-image: img.PNG ;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
