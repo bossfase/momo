@@ -1,19 +1,21 @@
+/* Grundlegendes Box-Sizing */
 * {
     box-sizing: border-box;
 }
 
+/* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
-    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
-    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    background: url('img.PNG') no-repeat center center fixed;
+    background-size: cover;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
+/* Overlay für bessere Lesbarkeit */
 .overlay {
-    background-color: rgba(26, 26, 26, 0.85); /* Etwas dunkler für den eleganten Touch */
+    background-color: rgba(26, 26, 26, 0.9);
     position: absolute;
     top: 0;
     left: 0;
@@ -22,110 +24,74 @@ body {
     z-index: -1;
 }
 
-.main-logo {
-    width: 250px; /* Passe die Breite an deine gewünschte Größe an */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-    margin-bottom: 10px;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Schatteneffekt für mehr Tiefe */
-}
-
+/* Header-Stile */
 header {
-    background-color: rgba(44, 44, 44, 0.9); /* Dezentes Dunkelgrau */
-    padding: 25px;
+    padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #b87c62; /* Metallischer Akzent */
+    border-bottom: 5px solid #b87c62;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+/* Logo-Stile */
+.main-logo {
+    width: 150px; /* Kleinere Breite für das Logo */
+    height: auto;
+    margin: 0 auto; /* Zentrierung des Logos */
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    max-width: 90%; /* Für kleinere Bildschirme */
 }
 
-.main-title {
-    font-family: Copperplate, Papyrus, fantasy; /* Font für Titel */
-    color: #b87c62; /* Warmer metallischer Farbton */
-    font-size: 3em; /* Größerer Titel für Fokus */
-    margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Schattierung für 3D-Effekt */
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
+/* Navigation */
 nav {
-    background-color: rgba(33, 33, 33, 0.9); /* Leichterer Grauton für Kontrast */
-    padding: 12px 0;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    background-color: #333;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: inline-block;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #b87c62; /* Warme metallische Farbe für Links */
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 25px; /* Runde Ecken für modernere Navigation */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #b87c62;
+    padding: 8px 15px;
+    border-radius: 20px;
 }
 
 nav ul li a:hover {
-    color: #fff; /* Weiß beim Hover */
-    background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund */
+    color: #fff;
+    background-color: rgba(184, 124, 98, 0.8);
 }
 
+/* Hauptinhalt */
 main {
     padding: 20px;
-    margin-top: 20px;
+    max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
+    margin: auto;
 }
 
 section {
-    padding: 25px;
-    background-color: rgba(32, 32, 32, 0.95); /* Elegantes Dunkelgrau */
-    margin: 15px auto;
-    border-radius: 15px; /* Weichere Ecken */
-    max-width: 850px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Schatten für Tiefe */
+    padding: 20px;
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
-    color: #b87c62;
-    font-size: 1.8em;
+    border-bottom: 2px solid #b87c62;
     margin-bottom: 15px;
-    padding-bottom: 8px;
 }
 
-ul {
-    list-style-type: none; /* Keine Aufzählungszeichen */
-    padding-left: 0;
-}
-
-ul li {
-    margin: 10px 0; /* Abstand zwischen den Listenelementen */
-    color: #ddd; /* Helleres Grau für Kontrast */
-}
-
-p {
-    line-height: 1.8; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
-    color: #e0e0e0;
-}
-
+/* Galerie */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -135,17 +101,15 @@ p {
 .gallery img {
     width: 30%;
     height: auto;
-    margin: 10px 0; /* Mehr Abstand zwischen den Bildern */
+    margin: 5px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Tieferer Schatten für mehr Kontrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Footer */
 footer {
-    background-color: rgba(44, 44, 44, 0.9); /* Dunkles Grau für den Footer */
+    background-color: #444;
     color: #f0f0f0;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    border-top: 3px solid #b87c62;
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.5);
+    padding: 15px;
 }
