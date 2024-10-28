@@ -1,0 +1,122 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
+    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hauptlogo */
+.main-logo {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #b87c62; /* Warme metallische Farbe */
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(184, 124, 98, 0.8);
+}
+
+/* Hauptinhalt */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 20px;
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Formularstile */
+form {
+    display: flex;
+    flex-direction: column; /* Elemente untereinander anordnen */
+    max-width: 800px; /* Maximale Breite des Formulars */
+    margin: auto; /* Zentrieren */
+    padding: 20px; /* Innenabstand */
+    background-color: #2a2a2a; /* Hintergrundfarbe für das Formular */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für den Effekt */
+}
+
+label {
+    margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+    color: #b87c62; /* Farbe der Labels */
+}
+
+input, textarea {
+    padding: 10px; /* Innenabstand */
+    margin-bottom: 15px; /* Abstand zwischen den Eingabefeldern */
+    border: 1px solid #b87c62; /* Rahmenfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #444; /* Hintergrundfarbe für Eingabefelder */
+    color: #f0f0f0; /* Textfarbe */
+    font-size: 16px; /* Schriftgröße */
+}
+
+button {
+    background-color: #b87c62; /* Hintergrundfarbe des Buttons */
+    color: #fff; /* Textfarbe des Buttons */
+    padding: 10px; /* Innenabstand */
+    border: none; /* Rahmen entfernen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 16px; /* Schriftgröße */
+    cursor: pointer; /* Mauszeiger zeigt, dass es klickbar ist */
+}
+
+button:hover {
+    background-color: rgba(184, 124, 98, 0.8); /* Farbe beim Hover */
+}
+
+/* Anpassungen für mobile Ansicht */
+@media (max-width: 600px) {
+    input, textarea, button {
+        font-size: 14px; /* Kleinere Schriftgröße für Mobilgeräte */
+    }
+
+    form {
+        padding: 10px; /* Weniger Innenabstand für Mobilgeräte */
+    }
+}
