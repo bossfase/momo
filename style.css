@@ -141,26 +141,35 @@ button:hover {
     color: #b87c62;
 }
 
-/* Tabellenstil für Dienstleistungen */
+/* Kompakte Tabellenstil für Dienstleistungen */
 .services-table {
     width: 100%;
     margin: 20px 0;
-    border-collapse: collapse; /* Zusammenführung der Zellgrenzen */
-    text-align: left;
+    border-collapse: collapse;
     font-size: 16px;
 }
 
 .services-table th, .services-table td {
-    padding: 12px 15px; /* Polsterung in den Zellen */
-    border: 1px solid #b87c62; /* Farbe passend zum Theme */
+    padding: 15px 20px; /* Mehr Polsterung für Lesbarkeit */
+    border: 1px solid #b87c62;
+    text-align: center; /* Zentrierter Text für kompakte Anzeige */
 }
 
 .services-table th {
-    background-color: #333; /* Dunkler Hintergrund für Überschriften */
-    color: #f0f0f0; /* Helle Textfarbe */
+    background-color: #333;
+    color: #f0f0f0;
 }
 
 .services-table tr:nth-child(even) {
-    background-color: #2a2a2a; /* Alternierende Zeilenfarbe */
+    background-color: #2a2a2a;
 }
+
+/* Anpassungen für mobile Ansicht */
+@media (max-width: 600px) {
+    .services-table td, .services-table th {
+        padding: 12px; /* Weniger Polsterung für Mobilgeräte */
+        font-size: 14px; /* Kleinere Schriftgröße für Mobilgeräte */
+    }
+}
+
 
