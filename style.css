@@ -43,23 +43,25 @@ header {
 
 /* Navigation */
 nav {
-    background-color: #333; /* Dunkler Hintergrund für Navigation */
-    padding: 10px; /* Padding für die Navigation */
+    background-color: #333;
+    padding: 10px;
+    text-align: center; /* Zentriert die Navigation */
 }
 
 nav ul {
-    list-style: none; /* Keine Aufzählungszeichen */
-    padding: 0; /* Kein Padding für die Liste */
-    text-align: center; /* Zentrierte Navigation */
+    list-style: none;
+    padding: 0;
+    display: flex; /* Aktiviert Flexbox für die Navigation */
+    justify-content: center; /* Zentriert die Links horizontal */
+    flex-wrap: wrap; /* Erlaubt das Umwickeln, wenn der Platz nicht ausreicht */
 }
 
 nav ul li {
-    display: inline; /* Horizontale Anordnung der Links */
-    margin-right: 15px; /* Abstand zwischen den Links */
+    margin: 0 15px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
-    text-decoration: none; /* Keine Unterstreichung */
+    text-decoration: none;
     color: #b87c62; /* Warme metallische Farbe */
     padding: 8px 15px; /* Polsterung für Links */
     border-radius: 20px; /* Runde Ecken für Links */
@@ -69,6 +71,7 @@ nav ul li a:hover {
     color: #fff; /* Weiße Schriftfarbe beim Hover */
     background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
 }
+
 
 /* Flexbox für das Hauptlayout */
 main {
