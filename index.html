@@ -15,8 +15,8 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#ueber-uns">Über uns</a></li> <!-- Verlinkt auf den Über uns Abschnitt -->
-            <li><a href="#">Dienstleistungen</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li> <!-- Link zu Über uns -->
+            <li><a href="dienstleistungen.html">Dienstleistungen</a></li> <!-- Link zur neuen Dienstleistungen-Seite -->
             <li><a href="kontakt.html">Kontakt</a></li> <!-- Link zur Kontaktseite -->
         </ul>
     </nav>
@@ -28,12 +28,10 @@
         </section>
 
         <section>
-            <h2>Unsere Galerie</h2>
-            <div class="gallery">
-                <img src="image1.jpg" alt="Bild 1">
-                <img src="image2.jpg" alt="Bild 2">
-                <img src="image3.jpg" alt="Bild 3">
-            </div>
+            <h2 id="ueber-uns">Über uns</h2> <!-- ID hinzugefügt für "Über uns" -->
+            <p class="contact-info">Email: <span class="email">momo.bossfade@gmail.com</span></p> <!-- Nur die E-Mail in orange -->
+            <p class="contact-info">Telefon: <span class="telephone">+49 152 21676166</span></p> <!-- Nur die Telefonnummer in orange -->
+            <p class="contact-info">Adresse: Steinstraße 30, 14776 Brandenburg an der Havel</p>
         </section>
 
         <section>
@@ -42,12 +40,13 @@
             <p><strong>Samstag:</strong> 09:00 - 16:00 Uhr</p>
         </section>
 
-        <!-- Über uns Abschnitt mit ID -->
-        <section id="ueber-uns">
-            <h2>Über uns</h2>
-            <p class="contact-info">Email: <span class="email">momo.bossfade@gmail.com</span></p>
-            <p class="contact-info">Telefon: <span class="email">+49 152 21676166</span></p>
-            <p class="contact-info">Adresse: Steinstraße 30, 14776 Brandenburg an der Havel</p>
+        <section>
+            <h2>Unsere Galerie</h2>
+            <div class="gallery">
+                <img src="image1.jpg" alt="Bild 1">
+                <img src="image2.jpg" alt="Bild 2">
+                <img src="image3.jpg" alt="Bild 3">
+            </div>
         </section>
     </main>
 
