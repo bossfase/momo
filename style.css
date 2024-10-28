@@ -1,12 +1,10 @@
 /* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
-    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
-    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    background: #000; /* Hintergrund auf schwarz ändern */
     color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: red; /* Testfarbe für den Hintergrund */
 }
 
 /* Overlay für bessere Lesbarkeit */
@@ -51,14 +49,15 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 15px; /* Abstand zwischen den Links */
+    margin-right: 10px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
     text-decoration: none; /* Keine Unterstreichung */
     color: #b87c62; /* Warme metallische Farbe */
-    padding: 8px 15px; /* Polsterung für Links */
+    padding: 5px 10px; /* Polsterung für Links */
     border-radius: 20px; /* Runde Ecken für Links */
+    font-size: 14px; /* Schriftgröße für die Navigation */
 }
 
 nav ul li a:hover {
@@ -141,4 +140,11 @@ button {
 
 button:hover {
     background-color: #a56e5a; /* Dunklere Farbe beim Hover */
+}
+
+/* Kontaktstile */
+.contact-info {
+    color: #b87c62; /* Kontaktinformationen in der gleichen orange Farbe */
+    text-align: center; /* Zentriert die Kontaktinformationen */
+    font-size: 16px; /* Schriftgröße anpassen */
 }
