@@ -109,6 +109,7 @@ footer {
     text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
+
 /* Kompakte Tabellenstil für Dienstleistungen */
 .services-table {
     width: 100%;
@@ -139,3 +140,10 @@ footer {
         font-size: 14px; /* Kleinere Schriftgröße für Mobilgeräte */
     }
 }
+
+/* Generelle Regel, um Links zu beeinflussen */
+a {
+    color: inherit; /* Setzt die Farbe von Links auf die Farbe des umgebenden Textes */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
