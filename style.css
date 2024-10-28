@@ -1,59 +1,144 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Dein Stylesheet -->
-    <title>Boss Fade</title>
-</head>
-<body>
+/* Allgemeine Stile */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
+    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-color: red; /* Testfarbe für den Hintergrund */
+}
 
-    <header>
-        <img src="name.jpg" alt="Logo" class="main-logo"> <!-- Bild als Logo -->
-    </header>
+/* Overlay für bessere Lesbarkeit */
+.overlay {
+    background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Dienstleistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li> <!-- Link zur Kontaktseite -->
-        </ul>
-    </nav>
+/* Header */
+header {
+    background-color: #fff; /* Weißer Hintergrund */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
 
-    <main>
-        <section>
-            <h2>Willkommen bei Boss Fade</h2>
-            <p>Wir bieten euch die besten Haarschnitte in Brandenburg an.</p>
-        </section>
+/* Hauptlogo */
+.main-logo {
+    width: 70%; /* Breite auf 70% des Bildschirms anpassen */
+    height: auto;
+    margin: 0 auto; /* Zentrieren */
+    display: block; /* Damit das Bild als Block angezeigt wird */
+    padding: 20px 0; /* Abstand um das Bild */
+}
 
-        <section>
-            <h2>Unsere Galerie</h2>
-            <div class="gallery">
-                <img src="image1.jpg" alt="Bild 1">
-                <img src="image2.jpg" alt="Bild 2">
-                <img src="image3.jpg" alt="Bild 3">
-            </div>
-        </section>
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px; /* Padding für die Navigation */
+}
 
-        <section>
-            <h2>Öffnungszeiten</h2>
-            <p><strong>Montag bis Freitag:</strong> 09:00 - 18:00 Uhr</p>
-            <p><strong>Samstag:</strong> 09:00 - 16:00 Uhr</p>
-        </section>
+nav ul {
+    list-style: none; /* Keine Aufzählungszeichen */
+    padding: 0;
+    text-align: center; /* Zentrierte Navigation */
+    display: inline-flex; /* Flexbox für die Navigation */
+}
 
-        <section>
-            <h2>Kontakt</h2>
-            <p>Bei Fragen erreichst du uns unter:</p>
-            <p>Email: <a href="mailto:momo.bossfade@gmail.com" style="color: #b87c62;">momo.bossfade@gmail.com</a></p>
-            <p>Telefon: <a href="tel:+4915221676166" style="color: #b87c62;">+49 152 21676166</a></p>
-            <p>Adresse: Steinstraße 30, 14776 Brandenburg an der Havel</p>
-        </section>
-    </main>
+nav ul li {
+    margin-right: 15px; /* Abstand zwischen den Links */
+}
 
-    <footer>
-        <p>&copy; 2024 Boss Fade. Alle Rechte vorbehalten.</p>
-    </footer>
+nav ul li a {
+    text-decoration: none; /* Keine Unterstreichung */
+    color: #b87c62; /* Warme metallische Farbe */
+    padding: 8px 15px; /* Polsterung für Links */
+    border-radius: 20px; /* Runde Ecken für Links */
+}
 
-</body>
-</html>
+nav ul li a:hover {
+    color: #fff; /* Weiße Schriftfarbe beim Hover */
+    background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
+}
+
+/* Hauptinhalt */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
+    margin: auto; /* Zentriert den Hauptinhalt */
+}
+
+section {
+    padding: 20px;
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+}
+
+/* Titel */
+h2 {
+    border-bottom: 2px solid #b87c62; /* Akzentfarbe für Titel */
+    margin-bottom: 15px; /* Abstand unter der Überschrift */
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Gleichmäßige Verteilung */
+}
+
+.gallery img {
+    width: 30%; /* Breite der Bilder in der Galerie */
+    height: auto; /* Automatische Höhe */
+    margin: 5px 0; /* Abstand zwischen den Bildern */
+    border-radius: 10px; /* Runde Ecken für die Bilder */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Bilder */
+}
+
+/* Footer */
+footer {
+    background-color: #444; /* Dunkles Grau für den Footer */
+    color: #f0f0f0; /* Helle Schriftfarbe */
+    text-align: center; /* Zentrierter Text */
+    padding: 15px; /* Polsterung */
+}
+
+/* Formularstile für Kontakt */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; /* Maximale Breite des Formulars */
+    margin: auto; /* Zentrieren */
+}
+
+label {
+    margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
+}
+
+input, textarea {
+    margin-bottom: 15px; /* Abstand zwischen den Eingabefeldern */
+    padding: 10px; /* Polsterung für die Eingabefelder */
+    border: 1px solid #ccc; /* Rahmenfarbe */
+    border-radius: 5px; /* Runde Ecken */
+}
+
+button {
+    background-color: #b87c62; /* Hintergrundfarbe des Buttons */
+    color: white; /* Schriftfarbe des Buttons */
+    border: none; /* Kein Rahmen */
+    padding: 10px; /* Polsterung */
+    border-radius: 5px; /* Runde Ecken */
+    cursor: pointer; /* Zeigt, dass es klickbar ist */
+}
+
+button:hover {
+    background-color: #a56e5a; /* Dunklere Farbe beim Hover */
+}
