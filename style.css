@@ -144,7 +144,7 @@ button:hover {
 
 /* Kontaktstile */
 .contact-info {
-    text-align: center; /* Zentriert die Kontaktinformationen */
+    text-align: left; /* Zentriert die Kontaktinformationen */
     font-size: 16px; /* Schriftgröße anpassen */
 }
 
