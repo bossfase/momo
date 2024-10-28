@@ -34,7 +34,7 @@ header {
 
 /* Logo-Stile */
 .main-logo {
-    width: 50%; /* Breite auf 70% des Bildschirms anpassen */
+    width: 30%; /* Breite auf 70% des Bildschirms anpassen */
     height: auto;
     margin: 0 auto; /* Zentrieren */
     display: block; /* Damit das Bild als Block angezeigt wird und die Zentrierung greift */
