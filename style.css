@@ -165,3 +165,21 @@ a {
     text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px; /* Maximale Breite der Galerie */
+    margin: auto; /* Zentriert die Galerie */
+}
+
+.gallery img {
+    width: 30%; /* Breite der Bilder */
+    height: auto; /* Höhe automatisch */
+    margin: 5px; /* Abstand zwischen den Bildern */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für die Bilder */
+}
+
