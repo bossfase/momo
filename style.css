@@ -140,3 +140,27 @@ button:hover {
 .contact-info .telephone {
     color: #b87c62;
 }
+
+/* Tabellenstil für Dienstleistungen */
+.services-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse; /* Zusammenführung der Zellgrenzen */
+    text-align: left;
+    font-size: 16px;
+}
+
+.services-table th, .services-table td {
+    padding: 12px 15px; /* Polsterung in den Zellen */
+    border: 1px solid #b87c62; /* Farbe passend zum Theme */
+}
+
+.services-table th {
+    background-color: #333; /* Dunkler Hintergrund für Überschriften */
+    color: #f0f0f0; /* Helle Textfarbe */
+}
+
+.services-table tr:nth-child(even) {
+    background-color: #2a2a2a; /* Alternierende Zeilenfarbe */
+}
+
