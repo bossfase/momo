@@ -177,7 +177,9 @@ button:hover {
     color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
     text-decoration: none; /* Entfernt die Unterstreichung */
     pointer-events: none; /* Verhindert, dass der Text als Link behandelt wird */
+    user-select: none; /* Verhindert die Auswahl des Textes */
 }
+
 
 
 
