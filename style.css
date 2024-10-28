@@ -70,21 +70,38 @@ nav ul li a:hover {
     background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
 }
 
-/* Hauptinhalt */
+/* Flexbox für das Hauptlayout */
 main {
-    padding: 20px;
-    max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
-    margin: auto; /* Zentriert den Hauptinhalt */
+    display: flex;
+    flex-direction: column; /* Standardmäßig in einer Spalte */
+    align-items: center; /* Zentriert die Abschnitte */
 }
 
 section {
+    display: flex; /* Aktiviert Flexbox für die Sektionen */
+    flex-direction: column; /* Stellt sicher, dass der Inhalt vertikal angeordnet ist */
+    align-items: center; /* Zentriert den Inhalt */
     padding: 20px;
-    background-color: #2a2a2a; /* Dunkles Grau für die Sektionen */
-    margin: 10px auto; /* Automatische Seitenränder */
-    border-radius: 10px; /* Runde Ecken */
+    background-color: #2a2a2a;
+    margin: 10px;
+    border-radius: 10px;
     max-width: 800px; /* Maximale Breite */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 600px) {
+    main {
+        flex-direction: row; /* Wechselt in eine Zeilenanordnung */
+        flex-wrap: wrap; /* Erlaubt das Umwickeln von Elementen */
+        justify-content: center; /* Zentriert die Elemente */
+    }
+    section {
+        flex: 1; /* Jedes Sektionselement nimmt gleich viel Platz ein */
+        min-width: 200px; /* Minimale Breite für kleinere Bildschirme */
+    }
+}
+
 
 h2 {
     border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
