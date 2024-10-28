@@ -39,7 +39,7 @@ header {
 }
 
 .main-title {
-    font-family: 'Copperplate', 'Papyrus', fantasy;
+    font-family: Copperplate, Papyrus, fantasy; /* Font für Titel */
     color: #b87c62; /* Warmer metallischer Farbton */
     font-size: 3em; /* Größerer Titel für Fokus */
     margin: 0;
@@ -47,6 +47,7 @@ header {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
 
 nav {
     background-color: rgba(33, 33, 33, 0.9); /* Leichterer Grauton für Kontrast */
