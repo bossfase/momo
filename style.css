@@ -22,6 +22,13 @@ body {
     z-index: -1;
 }
 
+.main-logo {
+    width: 250px; /* Passe die Breite an deine gewünschte Größe an */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Schatteneffekt für mehr Tiefe */
+}
+
 header {
     background-color: rgba(44, 44, 44, 0.9); /* Dezentes Dunkelgrau */
     padding: 25px;
