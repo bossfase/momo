@@ -4,11 +4,23 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background-color: #1a1a1a; /* Dunkles Grau */
-    color: #f0f0f0; /* Helle Textfarbe für Kontrast */
+    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
+    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
+
+.overlay {
+    background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay für bessere Lesbarkeit */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 
 header {
     background-color: #444; /* Dunkles Grau */
