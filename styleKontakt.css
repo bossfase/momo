@@ -1,7 +1,7 @@
 /* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
-    background: #000; /* Schwarzer Hintergrund */
+    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
     color: #f0f0f0;
     margin: 0;
     padding: 0;
