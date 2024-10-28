@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Willkommen bei <span class="logo">Boss Fade</span></h1>
+        <div class="logo-container">
+            <img src="path/to/your/logo.png" alt="Boss Fade Logo" class="logo">
+            <h1 class="main-title">Boss Fade</h1>
+        </div>
         <p>Der moderne Barbier in Brandenburg.</p>
     </header>
     <nav>
@@ -19,25 +22,39 @@
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
-    <section id="preise">
-        <h2>Preise</h2>
-        <ul>
-            <li>Haarschnitt: <strong>20€</strong></li>
-            <li>Bartpflege: <strong>15€</strong></li>
-            <li>Komplettservice: <strong>30€</strong></li>
-        </ul>
-    </section>
-    <section id="mitarbeiter">
-        <h2>Mitarbeiter</h2>
-        <p>Wir haben ein erfahrenes Team, das bereit ist, Ihnen zu helfen!</p>
-    </section>
-    <section id="galerie">
-        <h2>Galerie</h2>
-        <p>Bilder von unseren besten Arbeiten kommen hier!</p>
-    </section>
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Rufen Sie uns an unter: <strong>01234 567890</strong></p>
-    </section>
+    <main>
+        <section id="preise">
+            <h2>Preise</h2>
+            <ul>
+                <li>Haarschnitt: <strong>20€</strong></li>
+                <li>Bartpflege: <strong>15€</strong></li>
+                <li>Komplettservice: <strong>30€</strong></li>
+            </ul>
+        </section>
+        <section id="mitarbeiter">
+            <h2>Mitarbeiter</h2>
+            <p>Unser erfahrenes Team, bereit, Ihnen zu helfen!</p>
+            <ul>
+                <li>Max Mustermann</li>
+                <li>Erika Mustermann</li>
+                <li>Hans Müller</li>
+            </ul>
+        </section>
+        <section id="galerie">
+            <h2>Galerie</h2>
+            <div class="gallery">
+                <img src="path/to/image1.jpg" alt="Frisur 1">
+                <img src="path/to/image2.jpg" alt="Frisur 2">
+                <img src="path/to/image3.jpg" alt="Frisur 3">
+            </div>
+        </section>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Rufen Sie uns an unter: <strong>01234 567890</strong></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Boss Fade. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
