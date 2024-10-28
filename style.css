@@ -8,6 +8,9 @@ body {
     color: #f0f0f0;
     margin: 0;
     padding: 0;
+   
+    background-color: red; /* Testfarbe für den Hintergrund */
+
 }
 
 /* Overlay für bessere Lesbarkeit */
