@@ -1,7 +1,7 @@
+/* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
-    background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
-    background-size: cover; /* Bild an Bildschirmgröße anpassen */
+    background: #000; /* Schwarzer Hintergrund */
     color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -69,54 +69,114 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Formularstile */
+/* Titel */
+h2 {
+    border-bottom: 2px solid #b87c62;
+    margin-bottom: 15px;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Formularstile für Kontakt */
 form {
     display: flex;
-    flex-direction: column; /* Elemente untereinander anordnen */
-    max-width: 800px; /* Maximale Breite des Formulars */
-    margin: auto; /* Zentrieren */
-    padding: 20px; /* Innenabstand */
-    background-color: #2a2a2a; /* Hintergrundfarbe für das Formular */
-    border-radius: 10px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für den Effekt */
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
 }
 
 label {
-    margin-bottom: 5px; /* Abstand zwischen Label und Eingabefeld */
-    color: #b87c62; /* Farbe der Labels */
+    margin-bottom: 5px;
 }
 
 input, textarea {
-    padding: 10px; /* Innenabstand */
-    margin-bottom: 15px; /* Abstand zwischen den Eingabefeldern */
-    border: 1px solid #b87c62; /* Rahmenfarbe */
-    border-radius: 5px; /* Abgerundete Ecken */
-    background-color: #444; /* Hintergrundfarbe für Eingabefelder */
-    color: #f0f0f0; /* Textfarbe */
-    font-size: 16px; /* Schriftgröße */
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #b87c62; /* Hintergrundfarbe des Buttons */
-    color: #fff; /* Textfarbe des Buttons */
-    padding: 10px; /* Innenabstand */
-    border: none; /* Rahmen entfernen */
-    border-radius: 5px; /* Abgerundete Ecken */
-    font-size: 16px; /* Schriftgröße */
-    cursor: pointer; /* Mauszeiger zeigt, dass es klickbar ist */
+    background-color: #b87c62;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: rgba(184, 124, 98, 0.8); /* Farbe beim Hover */
+    background-color: #a56e5a;
+}
+
+/* Kontaktstile */
+.contact-info {
+    text-align: left; /* Linksbündig statt zentriert */
+    font-size: 16px;
+}
+
+.contact-info .email,
+.contact-info .telephone {
+    color: #b87c62;
+}
+
+/* Kompakte Tabellenstil für Dienstleistungen */
+.services-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.services-table th, .services-table td {
+    padding: 15px 20px; /* Mehr Polsterung für Lesbarkeit */
+    border: 1px solid #b87c62;
+    text-align: center; /* Zentrierter Text für kompakte Anzeige */
+}
+
+.services-table th {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.services-table tr:nth-child(even) {
+    background-color: #2a2a2a;
 }
 
 /* Anpassungen für mobile Ansicht */
 @media (max-width: 600px) {
-    input, textarea, button {
+    .services-table td, .services-table th {
+        padding: 12px; /* Weniger Polsterung für Mobilgeräte */
         font-size: 14px; /* Kleinere Schriftgröße für Mobilgeräte */
     }
-
-    form {
-        padding: 10px; /* Weniger Innenabstand für Mobilgeräte */
-    }
 }
+
+.telephone-text { color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */ 
+text-decoration: none; /* Entfernt die Unterstreichung */ }
+
+.telephone-text {
+    color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
