@@ -1,8 +1,3 @@
-/* Grundlegendes Box-Sizing */
-* {
-    box-sizing: border-box;
-}
-
 /* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
@@ -11,17 +6,18 @@ body {
     color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background-color: red; /* Testfarbe für den Hintergrund */
 }
 
-/* Overlay für bessere Lesbarkeit */ 
+/* Overlay für bessere Lesbarkeit */
 .overlay {
     background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay */
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1; /* Overlay hinter dem Inhalt */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* Header */
@@ -34,7 +30,7 @@ header {
 
 /* Hauptlogo */
 .main-logo {
-    width: 40%; /* Breite auf 70% des Bildschirms anpassen */
+    width: 70%; /* Breite auf 70% des Bildschirms anpassen */
     height: auto;
     margin: 0 auto; /* Zentrieren */
     display: block; /* Damit das Bild als Block angezeigt wird */
@@ -44,24 +40,22 @@ header {
 /* Navigation */
 nav {
     background-color: #333;
-    padding: 10px;
-    text-align: center; /* Zentriert die Navigation */
+    padding: 10px; /* Padding für die Navigation */
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Keine Aufzählungszeichen */
     padding: 0;
-    display: flex; /* Aktiviert Flexbox für die Navigation */
-    justify-content: center; /* Zentriert die Links horizontal */
-    flex-wrap: wrap; /* Erlaubt das Umwickeln, wenn der Platz nicht ausreicht */
+    text-align: center; /* Zentrierte Navigation */
+    display: inline-flex; /* Flexbox für die Navigation */
 }
 
 nav ul li {
-    margin: 0 15px; /* Abstand zwischen den Links */
+    margin-right: 15px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none; /* Keine Unterstreichung */
     color: #b87c62; /* Warme metallische Farbe */
     padding: 8px 15px; /* Polsterung für Links */
     border-radius: 20px; /* Runde Ecken für Links */
@@ -72,49 +66,32 @@ nav ul li a:hover {
     background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
 }
 
-
-/* Flexbox für das Hauptlayout */
+/* Hauptinhalt */
 main {
-    display: flex;
-    flex-direction: column; /* Standardmäßig in einer Spalte */
-    align-items: center; /* Zentriert die Abschnitte */
+    padding: 20px;
+    max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
+    margin: auto; /* Zentriert den Hauptinhalt */
 }
 
 section {
-    display: flex; /* Aktiviert Flexbox für die Sektionen */
-    flex-direction: column; /* Stellt sicher, dass der Inhalt vertikal angeordnet ist */
-    align-items: center; /* Zentriert den Inhalt */
     padding: 20px;
     background-color: #2a2a2a;
-    margin: 10px;
+    margin: 10px auto;
     border-radius: 10px;
-    max-width: 800px; /* Maximale Breite */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
 }
 
-/* Media Query für kleinere Bildschirme */
-@media (max-width: 600px) {
-    main {
-        flex-direction: row; /* Wechselt in eine Zeilenanordnung */
-        flex-wrap: wrap; /* Erlaubt das Umwickeln von Elementen */
-        justify-content: center; /* Zentriert die Elemente */
-    }
-    section {
-        flex: 1; /* Jedes Sektionselement nimmt gleich viel Platz ein */
-        min-width: 200px; /* Minimale Breite für kleinere Bildschirme */
-    }
-}
-
-
+/* Titel */
 h2 {
-    border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
+    border-bottom: 2px solid #b87c62; /* Akzentfarbe für Titel */
     margin-bottom: 15px; /* Abstand unter der Überschrift */
 }
 
 /* Galerie */
 .gallery {
-    display: flex; /* Flexbox für die Galerie */
-    flex-wrap: wrap; /* Bilder umschließen */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; /* Gleichmäßige Verteilung */
 }
 
@@ -133,6 +110,7 @@ footer {
     text-align: center; /* Zentrierter Text */
     padding: 15px; /* Polsterung */
 }
+
 
 form {
     display: flex;
