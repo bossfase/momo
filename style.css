@@ -9,11 +9,23 @@ body {
 
 
 /* Header */
+
 header {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px; /* Weniger Polsterung oben und unten */
     text-align: center;
+    height: auto; /* Automatische Höhe, um den Inhalt zu passen */
 }
+
+/* Hauptlogo */
+.main-logo {
+    width: 40%; /* Breite anpassen, um das Logo kleiner zu machen */
+    height: auto; /* Höhe automatisch anpassen, um das Seitenverhältnis zu wahren */
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0; /* Weniger Polsterung, um die Höhe zu verringern */
+}
+
 
 /* Hauptlogo */
 .main-logo {
