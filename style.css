@@ -172,4 +172,11 @@ button:hover {
     }
 }
 
+/* Telefonnummernfarbe anpassen */
+.contact-info .telephone span {
+    color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+
 
