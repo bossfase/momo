@@ -98,47 +98,15 @@ footer {
     padding: 15px;
 }
 
-/* Formularstile für Kontakt */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #b87c62;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #a56e5a;
-}
-
 /* Kontaktstile */
 .contact-info {
     text-align: left; /* Linksbündig statt zentriert */
     font-size: 16px;
 }
 
-.contact-info .email,
-.contact-info .telephone {
-    color: #b87c62;
+.telephone-text {
+    color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
 /* Kompakte Tabellenstil für Dienstleistungen */
@@ -171,16 +139,3 @@ button:hover {
         font-size: 14px; /* Kleinere Schriftgröße für Mobilgeräte */
     }
 }
-
-/* Telefonnummernfarbe anpassen */
-.contact-info .telephone-text {
-    color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
-    text-decoration: none; /* Entfernt die Unterstreichung */
-    pointer-events: none; /* Verhindert, dass der Text als Link behandelt wird */
-    user-select: none; /* Verhindert die Auswahl des Textes */
-}
-
-
-
-
-
