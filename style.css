@@ -43,13 +43,12 @@ header {
 
 /* Navigation */
 nav {
-    padding: 0; /* Kein Padding für die Navigation */
-    background-color: transparent; /* Transparent für die Navigation */
+    padding: 10px; /* Padding für die Navigation */
 }
 
 nav ul {
     list-style: none; /* Keine Aufzählungszeichen */
-    padding: 0; /* Kein Padding für die Liste */
+    padding: 0;
     text-align: center; /* Zentrierte Navigation */
 }
 
@@ -113,4 +112,3 @@ footer {
     text-align: center; /* Zentrierter Text */
     padding: 15px; /* Polsterung */
 }
-
