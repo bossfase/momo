@@ -144,7 +144,13 @@ button:hover {
 
 /* Kontaktstile */
 .contact-info {
-    color: #b87c62; /* Kontaktinformationen in der gleichen orange Farbe */
     text-align: center; /* Zentriert die Kontaktinformationen */
     font-size: 16px; /* Schriftgröße anpassen */
 }
+
+/* E-Mail und Telefonnummer in orange */
+.contact-info .email,
+.contact-info .telephone {
+    color: #b87c62; /* Kontaktinformationen in der orange Farbe */
+}
+
