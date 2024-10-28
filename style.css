@@ -34,7 +34,7 @@ header {
 
 /* Logo-Stile */
 .main-logo {
-    width: 70%;; /* Kleinere Breite für das Logo */
+    width: 100%;; /* Kleinere Breite für das Logo */
     height: auto;
     margin: 0 auto; /* Zentrierung des Logos */
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
