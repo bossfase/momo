@@ -13,7 +13,7 @@ body {
     padding: 0;
 }
 
-/* Overlay für bessere Lesbarkeit */
+/* Overlay für bessere Lesbarkeit */ 
 .overlay {
     background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay */
     position: absolute;
