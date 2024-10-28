@@ -43,12 +43,13 @@ header {
 
 /* Navigation */
 nav {
-    padding: 10px; /* Padding für die Navigation */
+    padding: 0; /* Kein Padding für die Navigation */
+    background-color: transparent; /* Transparent für die Navigation */
 }
 
 nav ul {
     list-style: none; /* Keine Aufzählungszeichen */
-    padding: 0;
+    padding: 0; /* Kein Padding für die Liste */
     text-align: center; /* Zentrierte Navigation */
 }
 
