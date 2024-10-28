@@ -34,12 +34,14 @@ header {
 
 /* Logo-Stile */
 .main-logo {
-    width: 100%;; /* Kleinere Breite für das Logo */
+    width: 70%; /* Breite auf 70% des Bildschirms anpassen */
     height: auto;
-    margin: 0 auto; /* Zentrierung des Logos */
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-    max-width: 90%; /* Für kleinere Bildschirme */
+    margin: 0 auto; /* Zentrieren */
+    display: block; /* Damit das Bild als Block angezeigt wird und die Zentrierung greift */
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.7)); /* Schatten für bessere Sichtbarkeit */
+    padding: 20px 0; /* Abstand um das Bild */
 }
+
 
 /* Navigation */
 nav {
