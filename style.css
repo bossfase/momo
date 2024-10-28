@@ -141,6 +141,16 @@ button {
     cursor: pointer; /* Zeigt, dass es klickbar ist */
 }
 
+.contact-link {
+    color: #b87c62; /* Die gleiche Farbe wie die Navigationslinks */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+
 button:hover {
     background-color: #a56e5a; /* Dunklere Farbe beim Hover */
 }
