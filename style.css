@@ -130,16 +130,20 @@ button:hover {
     background-color: #a56e5a;
 }
 
-/* Kontaktstile */
-.contact-info {
-    text-align: left; /* Linksbündig statt zentriert */
-    font-size: 16px;
+/* Verhindert das automatische Färben von Telefonnummern und E-Mails auf Mobilgeräten */
+.contact-info a {
+    color: #b87c62; /* Deine gewünschte Farbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
-.contact-info .email,
-.contact-info .telephone {
+.contact-info a:visited {
     color: #b87c62;
 }
+
+.contact-info a:hover {
+    color: #a56e5a; /* Optional: eine dunklere Farbe für den Hover-Effekt */
+}
+
 
 /* Kompakte Tabellenstil für Dienstleistungen */
 .services-table {
