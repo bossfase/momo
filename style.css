@@ -104,6 +104,11 @@ footer {
     font-size: 16px;
 }
 
+.email-text {
+    color: #b87c62; /* Setzt die E-Mail-Adresse in die gewünschte Farbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
 .telephone-text {
     color: #b87c62; /* Setzt die Telefonnummer in die gewünschte Farbe */
     text-decoration: none; /* Entfernt die Unterstreichung */
