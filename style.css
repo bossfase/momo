@@ -9,10 +9,11 @@ body {
     color: #f0f0f0;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .overlay {
-    background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay für bessere Lesbarkeit */
+    background-color: rgba(26, 26, 26, 0.85); /* Etwas dunkler für den eleganten Touch */
     position: absolute;
     top: 0;
     left: 0;
@@ -21,13 +22,13 @@ body {
     z-index: -1;
 }
 
-
 header {
-    background-color: #444; /* Dunkles Grau */
-    padding: 20px;
+    background-color: rgba(44, 44, 44, 0.9); /* Dezentes Dunkelgrau */
+    padding: 25px;
     text-align: center;
-    border-bottom: 5px solid #b87c62; /* Metallischer Akzent */
+    border-bottom: 3px solid #b87c62; /* Metallischer Akzent */
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .logo-container {
@@ -37,39 +38,42 @@ header {
     flex-direction: column;
 }
 
-.logo {
-    width: 100px; /* Größe des Logos anpassen */
-    margin-bottom: 10px;
-}
-
 .main-title {
+    font-family: 'Copperplate', 'Papyrus', fantasy;
     color: #b87c62; /* Warmer metallischer Farbton */
-    font-size: 2.5em; /* Größe des Haupttitels */
+    font-size: 3em; /* Größerer Titel für Fokus */
     margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Schattierung für 3D-Effekt */
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 nav {
-    background-color: #333; /* Dunkler Hintergrund für die Navigation */
-    padding: 10px;
+    background-color: rgba(33, 33, 33, 0.9); /* Leichterer Grauton für Kontrast */
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: inline-block;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #b87c62; /* Warme metallische Farbe für Links */
-    transition: color 0.3s ease;
-    padding: 8px 15px;
-    border-radius: 20px; /* Runde Ecken für Links */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px; /* Runde Ecken für modernere Navigation */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -79,20 +83,24 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    margin-top: 20px;
 }
 
 section {
-    padding: 20px;
-    background-color: #2a2a2a; /* Dunkles Grau für die Sektionen */
-    margin: 10px auto;
-    border-radius: 10px; /* Runde Ecken */
-    max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+    padding: 25px;
+    background-color: rgba(32, 32, 32, 0.95); /* Elegantes Dunkelgrau */
+    margin: 15px auto;
+    border-radius: 15px; /* Weichere Ecken */
+    max-width: 850px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Schatten für Tiefe */
 }
 
 h2 {
     border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
+    color: #b87c62;
+    font-size: 1.8em;
     margin-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 ul {
@@ -102,10 +110,12 @@ ul {
 
 ul li {
     margin: 10px 0; /* Abstand zwischen den Listenelementen */
+    color: #ddd; /* Helleres Grau für Kontrast */
 }
 
 p {
-    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    line-height: 1.8; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+    color: #e0e0e0;
 }
 
 .gallery {
@@ -115,17 +125,19 @@ p {
 }
 
 .gallery img {
-    width: 30%; /* Breite der Bilder in der Galerie */
+    width: 30%;
     height: auto;
-    margin: 5px 0; /* Abstand zwischen den Bildern */
+    margin: 10px 0; /* Mehr Abstand zwischen den Bildern */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Bilder */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Tieferer Schatten für mehr Kontrast */
 }
 
 footer {
-    background-color: #444; /* Dunkles Grau für den Footer */
+    background-color: rgba(44, 44, 44, 0.9); /* Dunkles Grau für den Footer */
     color: #f0f0f0;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     position: relative;
+    border-top: 3px solid #b87c62;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.5);
 }
