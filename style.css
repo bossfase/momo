@@ -37,6 +37,7 @@ header {
     padding: 20px 0; /* Abstand um das Bild */
 }
 
+
 /* Navigation */
 nav {
     background-color: #333;
@@ -46,12 +47,17 @@ nav {
 nav ul {
     list-style: none; /* Keine Aufzählungszeichen */
     padding: 0;
-    text-align: center; /* Zentrierte Navigation */
-    display: inline-flex; /* Flexbox für die Navigation */
+    margin: 0; /* Sicherstellen, dass der Margin auf 0 gesetzt ist */
+    display: flex; /* Verwende Flexbox für die Navigation */
+    justify-content: center; /* Zentriert die Navigationselemente */
 }
 
 nav ul li {
     margin-right: 15px; /* Abstand zwischen den Links */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Entferne den Abstand nach dem letzten Link */
 }
 
 nav ul li a {
@@ -65,6 +71,7 @@ nav ul li a:hover {
     color: #fff; /* Weiße Schriftfarbe beim Hover */
     background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
 }
+
 
 /* Hauptinhalt */
 main {
