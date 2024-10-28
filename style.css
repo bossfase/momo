@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -12,17 +11,29 @@ body {
 }
 
 header {
-    background-color: #ff7f50; /* Leuchtendes Orange */
-    color: white;
+    background-color: #444; /* Dunkles Grau */
     padding: 20px;
     text-align: center;
-    border-bottom: 5px solid #444; /* Dunkle Linie unten */
+    border-bottom: 5px solid #b87c62; /* Metallischer Akzent */
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    width: 100px; /* Größe des Logos anpassen */
+    margin-bottom: 10px;
+}
+
+.main-title {
+    color: #b87c62; /* Warmer metallischer Farbton */
+    font-size: 2.5em; /* Größe des Haupttitels */
+    margin: 0;
 }
 
 nav {
@@ -43,12 +54,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ff7f50; /* Leuchtendes Orange für Links */
+    color: #b87c62; /* Warme metallische Farbe für Links */
     transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 20px; /* Runde Ecken für Links */
 }
 
 nav ul li a:hover {
     color: #fff; /* Weiß beim Hover */
+    background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund */
+}
+
+main {
+    padding: 20px;
 }
 
 section {
@@ -57,10 +75,12 @@ section {
     margin: 10px auto;
     border-radius: 10px; /* Runde Ecken */
     max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
 }
 
 h2 {
-    border-bottom: 2px solid #ff7f50; /* Leuchtendes Orange als Akzent */
+    border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
+    margin-bottom: 15px;
 }
 
 ul {
@@ -74,4 +94,26 @@ ul li {
 
 p {
     line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: 30%; /* Breite der Bilder in der Galerie */
+    height: auto;
+    margin: 5px 0; /* Abstand zwischen den Bildern */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Bilder */
+}
+
+footer {
+    background-color: #444; /* Dunkles Grau für den Footer */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px;
+    position: relative;
 }
