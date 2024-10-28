@@ -1,11 +1,8 @@
-/* Grundlegendes Box-Sizing */
-* {
-    box-sizing: border-box;
-}
-
 /* Allgemeine Stile */
 body {
     font-family: 'Helvetica', sans-serif;
+    background: url('img.PNG')center fixed;
+    background-size: cover;
     background: url('img.PNG') no-repeat center center fixed; /* Hintergrundbild */
     background-size: cover; /* Bild an Bildschirmgröße anpassen */
     color: #f0f0f0;
@@ -15,12 +12,12 @@ body {
 
 /* Overlay für bessere Lesbarkeit */
 .overlay {
+    background-color: rgba(26, 26, 26, 0.9);
     background-color: rgba(26, 26, 26, 0.9); /* Dunkles Overlay */
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+@@ -24,92 +24,92 @@
     z-index: -1;
 }
 
@@ -34,31 +31,42 @@ header {
 
 /* Hauptlogo */
 .main-logo {
+    width: 30%; /* Breite auf 70% des Bildschirms anpassen */
     width: 70%; /* Breite auf 70% des Bildschirms anpassen */
     height: auto;
     margin: 0 auto; /* Zentrieren */
+    display: block; /* Damit das Bild als Block angezeigt wird und die Zentrierung greift */
     display: block; /* Damit das Bild als Block angezeigt wird */
     padding: 20px 0; /* Abstand um das Bild */
 }
 
 /* Navigation */
 nav {
-    padding: 0; /* Kein Padding für die Navigation */
-    background-color: transparent; /* Transparent für die Navigation */
+    background-color: #333;
+    padding: 10px;
+    padding: 10px; /* Padding für die Navigation */
 }
 
 nav ul {
+    list-style: none;
     list-style: none; /* Keine Aufzählungszeichen */
-    padding: 0; /* Kein Padding für die Liste */
+    padding: 0;
+    text-align: center;
     text-align: center; /* Zentrierte Navigation */
 }
 
 nav ul li {
+    display: inline;
+    margin-right: 15px;
     display: inline; /* Horizontale Anordnung der Links */
     margin-right: 15px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
+    text-decoration: none;
+    color: #b87c62;
+    padding: 8px 15px;
+    border-radius: 20px;
     text-decoration: none; /* Keine Unterstreichung */
     color: #b87c62; /* Warme metallische Farbe */
     padding: 8px 15px; /* Polsterung für Links */
@@ -66,6 +74,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(184, 124, 98, 0.8);
     color: #fff; /* Weiße Schriftfarbe beim Hover */
     background-color: rgba(184, 124, 98, 0.8); /* Leicht transparenter Hintergrund beim Hover */
 }
@@ -74,11 +84,17 @@ nav ul li a:hover {
 main {
     padding: 20px;
     max-width: 1200px; /* Begrenzte Breite für den Hauptinhalt */
+    margin: auto;
     margin: auto; /* Zentriert den Hauptinhalt */
 }
 
 section {
     padding: 20px;
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     background-color: #2a2a2a; /* Dunkles Grau für die Sektionen */
     margin: 10px auto; /* Automatische Seitenränder */
     border-radius: 10px; /* Runde Ecken */
@@ -87,18 +103,28 @@ section {
 }
 
 h2 {
+    border-bottom: 2px solid #b87c62;
+    margin-bottom: 15px;
     border-bottom: 2px solid #b87c62; /* Leuchtendes Orange als Akzent */
     margin-bottom: 15px; /* Abstand unter der Überschrift */
 }
 
 /* Galerie */
 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     display: flex; /* Flexbox für die Galerie */
     flex-wrap: wrap; /* Bilder umschließen */
     justify-content: space-between; /* Gleichmäßige Verteilung */
 }
 
 .gallery img {
+    width: 30%;
+    height: auto;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 30%; /* Breite der Bilder in der Galerie */
     height: auto; /* Automatische Höhe */
     margin: 5px 0; /* Abstand zwischen den Bildern */
@@ -108,6 +134,10 @@ h2 {
 
 /* Footer */
 footer {
+    background-color: #444;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px;
     background-color: #444; /* Dunkles Grau für den Footer */
     color: #f0f0f0; /* Helle Schriftfarbe */
     text-align: center; /* Zentrierter Text */
