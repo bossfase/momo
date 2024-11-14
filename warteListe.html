@@ -29,51 +29,56 @@
     
         <p id="wartezeitAnzeige">Wartezeit: </p>
         
-<!-- HTML-Formular -->
-<!-- HTML-Formular -->
-<form id="wartelisteForm">
-    <input type="text" id="name" placeholder="Dein Name" required>
-    <input type="email" id="email" placeholder="Deine E-Mail" required>
-    <button type="submit">Auf Warteliste setzen</button>
-</form>
+        <!-- HTML-Formular -->
+        <form id="wartelisteForm">
+            <input type="text" id="name" placeholder="Dein Name" required>
+            <input type="email" id="email" placeholder="Deine E-Mail" required>
+            <button type="submit">Auf Warteliste setzen</button>
+        </form>
 
-<!-- Anzeige der aktuellen Wartezeit -->
-<div id="wartezeitAnzeigen"></div>
+        <!-- Anzeige der aktuellen Wartezeit -->
+        <div id="wartezeitAnzeigen"></div>
 
-<script>
-// JavaScript zur Handhabung der Formular- und API-Anfragen
-document.getElementById("wartelisteForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+        <script>
+        // JavaScript zur Handhabung der Formular- und API-Anfragen
+        document.getElementById("wartelisteForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const friseurId = 1; // Beispiel Friseur-ID
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const friseurId = document.getElementById("friseur").value; // Friseur-ID aus dem Dropdown
 
-    try {
-        const response = await fetch('/api/anmelden', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, friseurId })
+            try {
+                const response = await fetch('/api/anmelden', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, friseurId })
+                });
+
+                // Überprüfen, ob die Antwort ein JSON-Objekt ist
+                const responseText = await response.text();  // Hole die rohe Antwort
+                let data;
+                try {
+                    data = JSON.parse(responseText);  // Versuche die Antwort zu parsen
+                } catch (e) {
+                    console.error("Fehler beim Parsen der Antwort:", e);
+                    throw new Error("Antwort konnte nicht als JSON geparst werden.");
+                }
+
+                if (response.status === 400) {
+                    alert(data.message);
+                } else {
+                    document.getElementById("wartezeitAnzeigen").innerText = `Wartezeit: ${data.daten.wartezeit}`;
+                }
+
+            } catch (error) {
+                console.error('Fehler:', error);  // Hier loggst du den Fehler
+                alert('Es gab einen Fehler bei der Anmeldung.');
+            }
         });
-        
-        const data = await response.json();
-        
-        if (response.status === 400) {
-            alert(data.message); // Fehler ausgeben, wenn der Benutzer schon auf der Liste steht
-        } else {
-            // Wartezeit anzeigen
-            document.getElementById("wartezeitAnzeigen").innerText = `Wartezeit: ${data.daten.wartezeit}`;
-        }
-
-    } catch (error) {
-        console.error('Fehler:', error);
-        alert('Es gab einen Fehler bei der Anmeldung.');
-    }
-});
-</script>
-        
+        </script>
     </main>
 </body>
 </html>
