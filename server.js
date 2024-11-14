@@ -21,6 +21,8 @@ app.use(express.json());
 
 // Session-Setup
 app.use(session({
+    origin: 'https://momo-55y.pages.dev', 
+    methods: ['GET', 'POST'],  
     secret: 'yourSecretKey',
     resave: false,
     saveUninitialized: true
