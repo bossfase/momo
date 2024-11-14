@@ -1,79 +1,57 @@
+
+<!-- index.html (Frontend) -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleKontakt.css"> <!-- Dein Stylesheet -->
     <title>Warteliste - Boss Fade</title>
 </head>
 <body>
+    <h1>Warteliste</h1>
+    <form id="wartelisteForm">
+        <input type="text" id="name" placeholder="Dein Name" required>
+        <input type="email" id="email" placeholder="Deine E-Mail" required>
+        <button type="submit">Auf Warteliste setzen</button>
+    </form>
+    <button id="zeigeWartezeit">Wartezeit anzeigen</button>
+    <p id="wartezeitAnzeige">Wartezeit: </p>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <script>
+        document.getElementById("wartelisteForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const friseurId = 1; // Beispiel Friseur-ID
 
-    <main>
-        <h1>Warteliste</h1>
+            try {
+                const response = await fetch('/api/anmelden', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, friseurId })
+                });
 
-        <label for="friseur">Friseur wählen:</label>
-        <select id="friseur">
-            <option value="1">Friseur 1</option>
-            <option value="2">Friseur 2</option>
-        </select>
-        <button id="zeigeWartezeit">Wartezeit anzeigen</button>
-    
-        <p id="wartezeitAnzeige">Wartezeit: </p>
-        
-<!-- HTML-Formular -->
-<!-- HTML-Formular -->
-<form id="wartelisteForm">
-    <input type="text" id="name" placeholder="Dein Name" required>
-    <input type="email" id="email" placeholder="Deine E-Mail" required>
-    <button type="submit">Auf Warteliste setzen</button>
-</form>
-
-<!-- Anzeige der aktuellen Wartezeit -->
-<div id="wartezeitAnzeigen"></div>
-
-<script>
-// JavaScript zur Handhabung der Formular- und API-Anfragen
-document.getElementById("wartelisteForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const friseurId = 1; // Beispiel Friseur-ID
-
-    try {
-        const response = await fetch('/api/anmelden', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, friseurId })
+                const data = await response.json();
+                if (response.status === 400) {
+                    alert(data.message);
+                } else {
+                    document.getElementById("wartezeitAnzeige").innerText = `Wartezeit: ${data.daten.wartezeit}`;
+                }
+            } catch (error) {
+                console.error('Fehler:', error);
+                alert('Fehler bei der Anmeldung.');
+            }
         });
-        
-        const data = await response.json();
-        
-        if (response.status === 400) {
-            alert(data.message); // Fehler ausgeben, wenn der Benutzer schon auf der Liste steht
-        } else {
-            // Wartezeit anzeigen
-            document.getElementById("wartezeitAnzeigen").innerText = `Wartezeit: ${data.daten.wartezeit}`;
-        }
 
-    } catch (error) {
-        console.error('Fehler:', error);
-        alert('Es gab einen Fehler bei der Anmeldung.');
-    }
-});
-</script>
-        
-    </main>
+        document.getElementById("zeigeWartezeit").addEventListener("click", async function() {
+            try {
+                const response = await fetch(`/api/wartezeit?friseurId=1`);
+                const data = await response.json();
+                document.getElementById("wartezeitAnzeige").innerText = `Wartezeit: ${data.wartezeit}, Personen in der Warteliste: ${data.personCount}`;
+            } catch (error) {
+                console.error('Fehler:', error);
+                alert('Fehler bei der Abfrage der Wartezeit.');
+            }
+        });
+    </script>
 </body>
 </html>
